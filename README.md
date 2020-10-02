@@ -1,7 +1,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 # project cs v2 
 
-Vist the [Website](sachsom95.github.io/project_cs_v2/) here
+Vist the [Website](https://sachsom95.github.io/project_cs_v2/) here
 
 This is the second iteration of 'project_cs' using mkdocs framework. 
 Project CS is an experimental website for Msc CS students of UCD. Students can write notes for lecture 
