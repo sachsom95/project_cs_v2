@@ -107,3 +107,9 @@ p "Hello, World\n"
 $ "Hello, World\n"
 ```
 Here we see that `p` outputs a raw output including the new line escape charecter which is other wise hidden when using `puts` and `print`
+
+## Reference 
+
+* Jesus Castellos [Ruby Guides](https://www.rubyguides.com/2018/10/puts-vs-print/)
+* Mike Danes [Youtube tutorial](https://www.youtube.com/watch?v=t_ispmWmdjY)
+* Prof. Mark Keane Lecture [COMP47530](https://sisweb.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=MODULE&MODULE=COMP47530)
