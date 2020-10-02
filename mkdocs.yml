@@ -1,0 +1,52 @@
+site_name: Project CS
+theme:
+  name: material
+  features:
+    - navigation.instant
+    # the tabs option will make it have indiviual  pages at top rather than in Nav
+    - navigation.tabs
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+pages:
+  - Home: "index.md"
+  - Python:
+      - "Chapter 1": "Python/Chapter1.md"
+      - "Chapter 1": "Python/Chapter2.md"
+  - Machine Learning:
+      - "Chapter 1": "Python/Chapter1.md"
+      - "Chapter 1": "Python/Chapter2.md"
+  - Data Structure and Algorithms:
+      - "Chapter 1": "Python/Chapter1.md"
+      - "Chapter 1": "Python/Chapter2.md"
+  - Java:
+      - "Chapter 1": "Python/Chapter1.md"
+      - "Chapter 1": "Python/Chapter2.md"
+  - Ruby:
+      - "Chapter 1": "Python/Chapter1.md"
+      - "Chapter 1": "Python/Chapter2.md"
+  - About:
+      - "License": "about/license.md"
+      # - "Release Notes": "about/release-notes.md"
+
+# Github
+repo_url: https://github.com/sachsom95/project_cs_v2
+repo_name: sachsom95/project cs v2
+
+# SOCIAL
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: Sachin:sachin.soman@ucdconnect.ie
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/sachin-soman/
+    - icon: fontawesome/brands/github
+      link: https://github.com/sachsom95
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/sachinsoman95
