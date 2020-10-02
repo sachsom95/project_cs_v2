@@ -43,10 +43,9 @@ repo_name: sachsom95/project cs v2
 
 # SOCIAL and # Disque
 
-site_url: https://sachsom95.github.io/project_cs_v2/
+# site_url: https://sachsom95.github.io/project_cs_v2/
 
 extra:
-  disqus: https-sachsom95-github-io-project-cs-v2
   social:
     - icon: fontawesome/solid/paper-plane
       link: Sachin:sachin.soman@ucdconnect.ie
