@@ -28,7 +28,7 @@ pages:
       - "Chapter 1": "Python/Chapter1.md"
       - "Chapter 1": "Python/Chapter2.md"
   - Java:
-      - "Chapter 1": "Python/Chapter1.md"
+      - "main method in Java": "Java/main_method.md"
       - "Chapter 1": "Python/Chapter2.md"
   - Ruby:
       - "Hello, World!": "Ruby/introduction.md"
