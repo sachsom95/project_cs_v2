@@ -18,24 +18,24 @@ markdown_extensions:
 
 pages:
   - Home: "index.md"
-  - Python:
-      - "Chapter 1": "Python/Chapter1.md"
-      - "Chapter 1": "Python/Chapter2.md"
-  - Machine Learning:
-      - "Chapter 1": "Python/Chapter1.md"
-      - "Chapter 1": "Python/Chapter2.md"
-  - Data Structure and Algorithms:
-      - "Chapter 1": "Python/Chapter1.md"
-      - "Chapter 1": "Python/Chapter2.md"
+  # - Python:
+  #     - "Chapter 1": "Python/Chapter1.md"
+  #     - "Chapter 1": "Python/Chapter2.md"
+  # - Machine Learning:
+  #     - "Chapter 1": "Python/Chapter1.md"
+  #     - "Chapter 1": "Python/Chapter2.md"
+  # - Data Structure and Algorithms:
+  #     - "Chapter 1": "Python/Chapter1.md"
+  #     - "Chapter 1": "Python/Chapter2.md"
   - Java:
       - "main method in Java": "Java/main_method.md"
-      - "Chapter 1": "Python/Chapter2.md"
+      - "Objects": "Java/Objects.md"
   - Ruby:
       - "Hello, World!": "Ruby/introduction.md"
       - "Variables": "Ruby/variables.md"
-  - About:
-      - "License": "about/license.md"
-      # - "Release Notes": "about/release-notes.md"
+  # - About:
+  #     - "License": "about/license.md"
+  # - "Release Notes": "about/release-notes.md"
 
 # Github
 repo_url: https://github.com/sachsom95/project_cs_v2
