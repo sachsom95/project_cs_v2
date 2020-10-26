@@ -19,7 +19,7 @@ markdown_extensions:
 pages:
   - Home: "index.md"
   - Django:
-      - "Chapter 1": "Django/Introduction.md"
+      - "Chapter 1": "Django/introduction.md"
   #     - "Chapter 1": "Python/Chapter2.md"
   # - Machine Learning:
   #     - "Chapter 1": "Python/Chapter1.md"
