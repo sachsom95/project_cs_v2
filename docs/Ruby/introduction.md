@@ -96,6 +96,16 @@ $ [1,2,3,nil]
 
 Next observation is regarding the return type of `puts` and `print`. puts always returns a `nil` while `print` returns a string.
 
+### puts with the back-tick "`"
+
+There is a special case of puts that involves use of back-tick charecter 
+
+```rb
+    puts `ls`
+```
+what it does is that it executes the arguments in the puts command as an os command. So the command gets passed to the os and the output gets printed out.
+
+
 ## 3.The use of `p`
 
 `p` is used mainly for debugging purposes as in it returns a raw output. Lets look at an example
