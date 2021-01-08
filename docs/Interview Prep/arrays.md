@@ -29,7 +29,7 @@ def twoNumberSum(array, targetSum):
 Use Hash Map and compliment to do the operation in O(n)
 
 
-## 2. two Number Sum
+## 2. Valid Subsequence
 
 Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
 A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For example these numbers
@@ -61,16 +61,15 @@ The brute force solution is to use 3 for loops
 ``` py
 
 def threeNumberSum(array, targetSum):
-	lst = []
-	dic = {}
+	triple = []
 	array.sort()
 	for x in range(len(array)):
-		for y in range (x+1, len(array)):
-			if((targetSum - (array[x]+array[y])) in dic.keys()):
-				lst.append([array[x],array[y],targetSum - (array[x]+array[y])])
-			else:
-				dic[targetSum - (array[x]+array[y])] = True
-	return lst
+		for y in range(x+1,len(array)):
+			for z in range(y+1,len(array)):
+				sum = array[x]+array[y]+array[z]
+				if sum == targetSum:
+					triple.append([array[x],array[y],array[z]])
+	return triple
 
 ```
 This will be an O(n^3) operation not the best way
