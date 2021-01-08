@@ -49,7 +49,57 @@ def isValidSubsequence(array, sequence):
 This will be an O(n) operation with pop done on sequence array
 
 
+## 3. Three Number Sum problem - Important concept
 
+Given an array and a value, find if there is a triplet in array whose sum is equal to the given value. If there is such a triplet present in array, then return the triplets. The triplets must be in ascending order
 
+Eg Array = [12,3,1,2,-6,5,-8,6] target = 0
+Solution: [[-8,2,6],[-8,3,5],[-6,1,5]]
 
+The brute force solution is to use 3 for loops 
+
+``` py
+
+def threeNumberSum(array, targetSum):
+	lst = []
+	dic = {}
+	array.sort()
+	for x in range(len(array)):
+		for y in range (x+1, len(array)):
+			if((targetSum - (array[x]+array[y])) in dic.keys()):
+				lst.append([array[x],array[y],targetSum - (array[x]+array[y])])
+			else:
+				dic[targetSum - (array[x]+array[y])] = True
+	return lst
+
+```
+This will be an O(n^3) operation not the best way
+
+The other way is to use pointers. First we sort data using an efficent sorting algorith. Then we will here use 2 loops. The there will be two pointers left and right.
+The right will start from end and first one will follow the first for loop.
+When sum is larger than target we can decrement right index similarly if the sum is less we increment the left index.
+The important point is the increment which occurs when we find a sum. The reason we increment both index is because we know for sure that if we increment/decrement one value it is definitly not going to be equal to sum. 
+
+```py
+
+def threeNumberSum(array, targetSum):
+    
+	triple = []
+	left,right = 0,0
+	array.sort()
+	for x in range(len(array)-2):
+		left = x+1
+		right = len(array)-1
+		while left < right:
+			if (array[x] + array[left] + array[right] == targetSum):
+				triple.append([array[x],array[left],array[right]])
+				left+=1
+				right-=1
+			elif (array[x] + array[left] + array[right] > targetSum):
+				right-=1
+			else:
+				left+=1
+	return triple
+			
+```
 
