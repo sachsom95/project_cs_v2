@@ -102,3 +102,67 @@ def threeNumberSum(array, targetSum):
 			
 ```
 
+
+## 4. Smallest Number
+
+Given two arrays find a pair of numbers that has absolute difference closest to zero
+
+Eg Array1 = [-1, 5, 10, 20, 28, 3] 
+Array2 = [26, 134, 135, 15, 17]
+Solution: [28,26]
+
+The brute force solution is to use 2 for loops and find all possible combinations
+
+``` py
+
+def smallestDifference(arrayOne, arrayTwo):
+	smallest_pair =[]
+	smallest_val = abs(arrayOne[0] - arrayTwo[0]
+	for x in arrayOne:
+		for y in arrayTwo:
+			diff = abs(x - y)
+			if( diff < smallest_val ):
+				smallest_val = diff
+				smallest_pair = [x,y]
+	
+	return smallest_pair
+			
+
+```
+This will be an O(n^2) operation not the best way
+
+The other way is to use pointers. And exploit the ability to sort the array. First we sort data using an efficent sorting algorithm. Here we are doing a kind of calculated heurestic approach. with time complexity of `nlog(n) + mlog(m)`
+
+!!! Info "Note"
+    Note how we iinitialized float to have inifinte value
+	smallest_val = float("inf")
+
+```py
+
+def smallestDifference(arrayOne, arrayTwo):
+
+    arrayOne.sort()
+    arrayTwo.sort()
+    data = []
+    i, j = 0, 0
+    smallest_val = float("inf")
+
+    while (i < len(arrayOne) and j < len(arrayTwo)):
+        arr1 = arrayOne[i]
+        arr2 = arrayTwo[j]
+        diff = abs(arr1-arr2)
+
+        if diff < smallest_val:
+            smallest_val = diff
+            data = [arrayOne[i], arrayTwo[j]]
+
+        if (arr1 > arr2):
+            j += 1
+        elif (arr1 < arr2):
+            i += 1
+        else:
+            return [arr1, arr2]
+    return data
+	
+```
+
