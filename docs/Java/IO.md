@@ -38,3 +38,73 @@ For now we will focus on the charecter stream as its more important from intervi
 Byte stream has two abstract classes `InputStream` and `OutputStream` both have large number of classes which we can use. But we will focus on Charecter stream class
 
 ![charecter stream class]("images/io/char_stream.png")
+
+If we look the most important will be 
+
+    * BufferedReader
+    * FileReader
+    * InputStreamReader
+
+We will need to create a BufferedReader for any type of inputs. Now if we are accepting data from the console it is from `System.in` which is already in java.lang and is Public Static final so we can call it anywhere.
+
+## Example 1 Read Character from console
+
+So lets start reading data from console 
+
+
+```java
+
+import java.io.*;
+public class ReadFile {
+
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.println("Enter number");
+            int num = br.read();
+            System.out.println((char)num);
+            br.mark(1);
+        }catch(IOException e){
+            System.out.println("put an number bud");
+        }   
+    }
+}
+```
+
+So couple of things to notice. First we make a BuffereReader this has to take input from `System.in` but that is in bytes this can be converted using a `InputStreamReader` therfore we use that.
+
+The I/O all can throw `IOException`.
+
+## Important observation
+
+consider the following example
+
+```java
+
+import java.io.*;
+public class ReadFile {
+
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.println("Enter number");
+            int num = br.read();
+            System.out.println((char)num);
+            br.mark(1);
+        }catch(IOException e){
+            System.out.println("put an number bud");
+        }
+        try{
+            System.out.println("Enter a string");
+            String x = br.readLine();
+            System.out.println(x);
+        }catch(IOException e){
+            System.out.println("Illegal stuff mate");
+        }
+    }
+}
+
+```
+here we have used a readLine() function after read() this will not work as expected because when we do a read(). The charecter which we entered is accepted but before that we need to press enter which adds EOF to the stream. So next time when we do a readLine() it will take the EOF and stop the read process. Therfore consider how the buffer takes in data.
