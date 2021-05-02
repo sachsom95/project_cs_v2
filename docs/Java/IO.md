@@ -125,3 +125,7 @@ for example if we need to convert to Integer we can do `Integer.parseInt(x)`
 
 
 
+## Why have a buffer?
+Buffer is a temporary place where we can store data while its being populated. A buffer is almost like a shopping cart. When we shop we will keep everything we need in the cart. Once we are done with it, all objects can be checkedout. If we dont use a buffer it's as if we are with a single prodcut each time to the checkout. 
+
+Buffer improves the efficency of our streams. Thats why we wrap all out streams in a Buffer.
