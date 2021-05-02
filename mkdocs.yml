@@ -30,15 +30,14 @@ pages:
   - Java:
       - "main method in Java": "Java/main_method.md"
       - "Objects": "Java/Objects.md"
+      - "IO": "Java/IO.md"
+
   - Ruby:
       - "Hello, World!": "Ruby/introduction.md"
       - "Variables": "Ruby/variables.md"
 
   - Interview Prep:
       - "Popular": "Interview Prep/arrays.md"
-
-
-
 
   # - About:
   #     - "License": "about/license.md"
