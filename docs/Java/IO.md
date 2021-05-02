@@ -108,3 +108,20 @@ public class ReadFile {
 
 ```
 here we have used a readLine() function after read() this will not work as expected because when we do a read(). The charecter which we entered is accepted but before that we need to press enter which adds EOF to the stream. So next time when we do a readLine() it will take the EOF and stop the read process. Therfore consider how the buffer takes in data.
+
+## Numeric Wrappers
+
+When we use character stream we will need to use the type Wrappers to convert data from one form to other. The type wrappers are Double, Float, Long, Integer, Short, Byte, Character, and Boolean.
+
+So we can accept data in String format and convert to corresponding internal format we want.
+
+for example if we need to convert to Integer we can do `Integer.parseInt(x)`
+
+!!! info 
+     why not use type cast?
+     Type casting can only be done with compatible types like from double to int and between primitive types.
+     String is not a primitive but an object therfore we need to do casting by fucntions associated with the given 
+     object. "034" -> does not make sense hence we use Integer.ParseInt()
+
+
+
