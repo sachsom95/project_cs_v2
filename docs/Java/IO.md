@@ -14,7 +14,10 @@
 
 Java I/O is pretty big however it seems to follow a certain pattern therfore once we get the basics down the interfaces are all same. There are two main systems.
 
-=== "IO System"
+!!! info
+    The IO is in java.io package
+
+"IO System"
 
     * byte I/O
     * charecter I/O
@@ -28,4 +31,10 @@ The charecter stream is used to accept data in the form of 16 bit unicode. This 
 
 
 
-## 1.
+## 1. Charecter Stream
+
+For now we will focus on the charecter stream as its more important from interview point of view though. We will discuss byte stream.
+
+Byte stream has two abstract classes `InputStream` and `OutputStream` both have large number of classes which we can use. But we will focus on Charecter stream class
+
+![charecter stream class]("images/io/char_stream.png")
