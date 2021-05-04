@@ -46,4 +46,5 @@ def removeDuplicatesFromLinkedList(linkedList):
     return linkedList
 ```
 
-Here note the last if condition. This is needed when we have duplicates in the last part. This is `O(n)` 
+Here note the last if condition. This is needed when we have duplicates in the last part. This is `O(n)`.
+This is possible because the linkedlist is ordered.
