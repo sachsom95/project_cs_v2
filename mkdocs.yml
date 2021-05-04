@@ -38,8 +38,8 @@ pages:
       - "Variables": "Ruby/variables.md"
 
   - Interview Prep:
-      - "Popular": "Interview Prep/arrays.md"
-      - "Popular": "Interview Prep/linkedlist.md"
+      - "arrays": "Interview Prep/arrays.md"
+      - "linkedlist": "Interview Prep/linkedlist.md"
 
   # - About:
   #     - "License": "about/license.md"
