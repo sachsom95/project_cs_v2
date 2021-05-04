@@ -39,6 +39,7 @@ pages:
 
   - Interview Prep:
       - "Popular": "Interview Prep/arrays.md"
+      - "Popular": "Interview Prep/linkedlist.md"
 
   # - About:
   #     - "License": "about/license.md"
