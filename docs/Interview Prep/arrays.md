@@ -166,3 +166,55 @@ def smallestDifference(arrayOne, arrayTwo):
 	
 ```
 
+
+## 4. Tournament Winner
+
+Suppose we have two arrays
+
+* `competition` this contains list of team ["homeTeam","awayTeam"]
+	```
+	competiton = [ 
+		["GO","PYTHON"],
+		["PHP","PYTHON"],
+		["PYTHON","JAVA"]
+	]
+	``` 
+* `results` this contains a one dimension array which contains result  
+	```
+	results = [0, 0, 1]
+	```
+	where `0` means victory for the awayTeam and vice versa
+	Each victory means +3 points
+
+	Find out the winner of the competion 
+
+	here the sample output will be `PYTHON`
+	```
+
+
+``` py
+def tournamentWinner(competitions, results):
+    # Write your code here.
+	
+	hashmap = {}
+	for x,y in enumerate(competitions):
+		for z in y:
+			if (z not in hashmap):
+				hashmap[z] = 0
+			
+		if( results[x] == 1 ):
+			hashmap[y[0]] = hashmap[y[0]] + 3
+		else:
+			hashmap[y[1]] = hashmap[y[1]] + 3
+	highest = 0
+	data = None
+	for x in hashmap.keys():
+		if( hashmap[x] > highest):
+			highest = hashmap[x]
+			data = x
+	
+	
+    return data
+			
+```
+Using a hashmap we can do this fairly straightforward with `O(n)` result
