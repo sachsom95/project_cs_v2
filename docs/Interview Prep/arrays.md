@@ -218,3 +218,9 @@ def tournamentWinner(competitions, results):
 			
 ```
 Using a hashmap we can do this fairly straightforward with `O(n)` result
+
+## 5. String
+
+## 6. String
+
+## 7. String
